@@ -1,0 +1,101 @@
+@model IEnumerable<Test4.Models.Domain.FileModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Interface)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nbligne)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Créé)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Statut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pré_execution_succes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pré_execution_resultat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pré_execution_echec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post_execution_succes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post_execution_resultat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Post_execution_echec)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interface)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nbligne)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Créé)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Statut)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pré_execution_succes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pré_execution_resultat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pré_execution_echec)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Post_execution_succes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Post_execution_resultat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Post_execution_echec)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

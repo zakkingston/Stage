@@ -1,0 +1,90 @@
+@model Test4.Models.Domain.FileModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FileModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Interface)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Interface)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nbligne)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nbligne)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Créé)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Créé)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Statut)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Statut)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pré_execution_succes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pré_execution_succes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pré_execution_resultat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pré_execution_resultat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Pré_execution_echec)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Pré_execution_echec)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Post_execution_succes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Post_execution_succes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Post_execution_resultat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Post_execution_resultat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Post_execution_echec)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Post_execution_echec)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
